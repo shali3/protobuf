@@ -30,6 +30,7 @@ Pod::Spec.new do |s|
   # The following would cause duplicate symbol definitions. GPBProtocolBuffers is expected to be
   # left out, as it's an umbrella implementation file.
   s.exclude_files = 'objectivec/GPBProtocolBuffers.m'
+  s.header_mappings_dir = 'src'
 
   # Set a CPP symbol so the code knows to use framework imports.
   s.user_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=0' }
